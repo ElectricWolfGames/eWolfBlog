@@ -1,0 +1,10 @@
+language: csharp
+solution: eWolfCodeBlogger/eWolfCodeBlogger.sln
+
+install:
+  - nuget restore eWolfCodeBlogger/eWolfCodeBlogger.sln
+  - nuget install NUnit.Runners -Version 3.8.0 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release eWolfCodeBlogger/eWolfCodeBlogger.sln
+ 
+  
