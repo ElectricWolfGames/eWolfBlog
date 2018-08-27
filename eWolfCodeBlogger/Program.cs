@@ -1,6 +1,6 @@
 ﻿namespace eWolfCodeBlogger
 {
-    internal class Program
+    public static class Program
     {
         // wolf howling
         private static void Main(string[] args)

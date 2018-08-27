@@ -42,9 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuildPageBase.cs" />
     <Compile Include="Blogs\Extension.cs" />
     <Compile Include="Blogs\InternalsVisibleTo.cs" />
     <Compile Include="Extensions\StringBuilderExtension.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Helpers\HTMLFormater.cs" />
     <Compile Include="Interfaces\IBuildPage.cs" />
     <Compile Include="Program.cs" />
@@ -53,7 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Analyzer Include="..\packages\SonarAnalyzer.CSharp.7.4.0.6452\analyzers\Google.Protobuf.dll" />
+    <Analyzer Include="..\packages\SonarAnalyzer.CSharp.7.4.0.6452\analyzers\SonarAnalyzer.CSharp.dll" />
+    <Analyzer Include="..\packages\SonarAnalyzer.CSharp.7.4.0.6452\analyzers\SonarAnalyzer.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

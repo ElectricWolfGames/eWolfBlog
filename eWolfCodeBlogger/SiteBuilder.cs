@@ -8,16 +8,22 @@ namespace eWolfCodeBlogger
     {
         private List<IBuildPage> CreateListOfPages()
         {
-            List<IBuildPage> pages = new List<IBuildPage>();
-            pages.Add(new Extension());
-            pages.Add(new InternalsVisibleTo());
+            List<IBuildPage> pages = new List<IBuildPage>
+            {
+                new Extension(),
+                new InternalsVisibleTo()
+            };
 
             return pages;
         }
 
         public void Build()
         {
-            // loop through all the pages and create each one.
+            foreach (IBuildPage bp in CreateListOfPages())
+            {
+                bp.BuildPage();
+                string rawHtml = bp.Output();
+            }
         }
     }
 }

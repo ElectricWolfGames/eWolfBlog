@@ -1,13 +1,10 @@
 ﻿using eWolfCodeBlogger.Extensions;
 using eWolfCodeBlogger.Interfaces;
-using System.Text;
 
 namespace eWolfCodeBlogger.Blogs
 {
-    public class InternalsVisibleTo : IBuildPage
+    public class InternalsVisibleTo : BuildPageBase, IBuildPage
     {
-        private StringBuilder _rawText = new StringBuilder();
-
         public string Tags
         {
             get
@@ -18,7 +15,6 @@ namespace eWolfCodeBlogger.Blogs
 
         public void BuildPage()
         {
-            // _rawText.Append(HTMLFormater.AddTitle("InternalsVisibleTo"));
             _rawText.AddTitle("Internals Visible To");
 
             _rawText.LineBreak();
@@ -29,8 +25,6 @@ namespace eWolfCodeBlogger.Blogs
             _rawText.LineBreak();
             _rawText.AddCode("[assembly: InternalsVisibleTo('MyProjectInitTests')]");
             _rawText.LineBreak();
-
-            // _rawText.Append()
         }
     }
 }

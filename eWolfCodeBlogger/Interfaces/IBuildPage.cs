@@ -5,5 +5,7 @@
         string Tags { get; }
 
         void BuildPage();
+
+        string Output();
     }
 }
