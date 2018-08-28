@@ -5,6 +5,14 @@ namespace eWolfCodeBlogger.Blogs
 {
     public class Extension : BuildPageBase, IBuildPage
     {
+        public string Name
+        {
+            get
+            {
+                return "Extension";
+            }
+        }
+
         public string Tags
         {
             get

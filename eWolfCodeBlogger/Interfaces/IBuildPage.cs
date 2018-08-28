@@ -2,6 +2,8 @@
 {
     public interface IBuildPage
     {
+        string Name { get; }
+
         string Tags { get; }
 
         void BuildPage();

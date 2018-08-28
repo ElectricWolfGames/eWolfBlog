@@ -5,6 +5,14 @@ namespace eWolfCodeBlogger.Blogs
 {
     public class InternalsVisibleTo : BuildPageBase, IBuildPage
     {
+        public string Name
+        {
+            get
+            {
+                return "InternalsVisibleTo";
+            }
+        }
+
         public string Tags
         {
             get
