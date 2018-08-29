@@ -42,12 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blogs\UnitTestStructure.cs" />
     <Compile Include="BuildPageBase.cs" />
     <Compile Include="Blogs\Extension.cs" />
     <Compile Include="Blogs\InternalsVisibleTo.cs" />
     <Compile Include="Extensions\StringBuilderExtension.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Helpers\HTMLFormater.cs" />
+    <Compile Include="Helpers\HTMLUnorderedList.cs" />
     <Compile Include="Interfaces\IBuildPage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

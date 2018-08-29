@@ -7,29 +7,43 @@ namespace eWolfCodeBlogger
 {
     public class SiteBuilder
     {
-        private const string _outputPath = @"C:\GitHub\eWolfBlog\eWolfCodeBlogger\Output\Blogs";
-
         private List<IBuildPage> CreateListOfPages()
         {
             List<IBuildPage> pages = new List<IBuildPage>
             {
                 new Extension(),
-                new InternalsVisibleTo()
+                new InternalsVisibleTo(),
+                new UnitTestStructure(),
             };
 
             return pages;
         }
 
+        public string GetOutputPath()
+        {
+            string exePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+
+            string path = Path.GetDirectoryName(exePath);
+
+
+            DirectoryInfo parentDir = Directory.GetParent(path);
+            parentDir = Directory.GetParent(parentDir.FullName);
+
+
+            return parentDir.FullName + "/Output/Blogs";
+        }
+
         public void Build()
         {
-            Directory.CreateDirectory(_outputPath);
+            string path = GetOutputPath();
+            Directory.CreateDirectory(path);
 
             foreach (IBuildPage bp in CreateListOfPages())
             {
                 bp.BuildPage();
                 string rawHtml = bp.Output();
 
-                File.WriteAllText(Path.Combine(_outputPath, bp.Name + ".html"), rawHtml);
+                File.WriteAllText(Path.Combine(path, bp.Name + ".html"), rawHtml);
             }
         }
     }

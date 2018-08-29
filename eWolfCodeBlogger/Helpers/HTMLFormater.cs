@@ -21,5 +21,10 @@
         {
             return $"<p>{text}</p>";
         }
+
+        internal static string ListItem(string text)
+        {
+            return $"<li>{text}</li>";
+        }
     }
 }
