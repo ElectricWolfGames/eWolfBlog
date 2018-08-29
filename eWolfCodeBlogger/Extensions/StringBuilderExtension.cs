@@ -28,6 +28,12 @@ namespace eWolfCodeBlogger.Extensions
         public static void Paragraph(this StringBuilder sb, string text)
         {
             sb.Append(HTMLFormater.Paragraph(text));
+
+        }
+
+        public static void Href(this StringBuilder sb, string text, string name)
+        {
+            sb.Append(HTMLFormater.Href(text, name));
         }
     }
 }

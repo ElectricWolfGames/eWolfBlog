@@ -33,7 +33,7 @@ namespace eWolfCodeBlogger.Blogs
             {
                 _rawText.ListItem($"Unit test should always be in a sepearte project.");
                 _rawText.ListItem($"The project name should be the same as the main project with UnitTest suffifx. Like MyProjectUnitTests");
-                _rawText.ListItem($"The folders with in the unit test project should match the main project.");
+                _rawText.ListItem($"The folders layout with in the unit test project should match the main project.");
                 _rawText.ListItem($"Each class should match the file name from the main project but with the suffix Tests");
             }
 

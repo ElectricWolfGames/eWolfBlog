@@ -26,5 +26,10 @@
         {
             return $"<li>{text}</li>";
         }
+
+        internal static string Href(string text, string name)
+        {
+            return $"<a href='{text}'>{name}</a>";
+        }
     }
 }
